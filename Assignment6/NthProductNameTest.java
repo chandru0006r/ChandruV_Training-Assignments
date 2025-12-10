@@ -27,6 +27,17 @@ public class NthProductNameTest {
 	  
 	  System.out.println("\nTotal = " + list.size() + "\n7th Laptop name is = " + list.get(6).getText() + "\n");
 
+	  Thread.sleep(1000);
+	  
+	  driver.navigate().back();
+      driver.findElement(By.name("q")).sendKeys("TV",Keys.ENTER);
+      driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[14]/div/div/div")).click();
+      System.out.println(driver.getTitle());
+      driver.navigate().back();
+      driver.findElement(By.name("q")).sendKeys("Smart Phones",Keys.ENTER);
+      driver.findElement(By.xpath("//*[@id=\"container\"]/div/div[3]/div[1]/div[2]/div[3]/div/div/div")).click();
+      System.out.println(driver.getTitle());
+
 	  Thread.sleep(2000);
 	  driver.quit();
   }
